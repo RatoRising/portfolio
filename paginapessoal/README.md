@@ -1,2 +1,0 @@
-# paginapessoal
- Meu site laboratório

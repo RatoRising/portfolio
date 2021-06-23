@@ -226,7 +226,7 @@ nav a:hover {
 }
 
 .contatos a:hover {
-    color: lightgrey;
+    color: red;
     text-decoration: none;
 
 }
