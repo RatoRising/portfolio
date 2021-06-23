@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #009EE0;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.sobre {
+    background-image: url(../imagens/imagebg2.jpg);
+    background-position: center-top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 2em;
+    text-shadow: 2px 2px 2px black;
+}
+
+a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+/*     CABEÇALHO     */
+header {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    height: 100px;
+    position: fixed;
+    width: 100vw;
+}
+
+.containerheader {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: space-between;
+    margin: auto;
+    width: 85vw;
+}
+
+nav li {
+    display: inline;
+    padding: 5px;
+    list-style: none;
+}
+
+nav a {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #009EE0;
+    color: white;
+    transition: .5s;
+}
+
+/*     LINK RETORNO INÍCIO      */
+.voltar {
+    display: flex;
+    margin: 30px;
+    justify-content: flex-end;
+}
+
+.voltar div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.voltar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*     ARTICLES     */
+.container {
+    color: white;
+    margin: auto;
+    padding-top: 100px;
+    max-width: 1200px;
+}
+
+/* PARALLAX */
+.apresentacao {
+    align-items: center;
+    background-image: url(../imagens/imagebg1.jpg);
+    background-position: center-top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    height: 100vh;
+}
+
+.digitador {
+    animation: piscacursor .5s infinite normal, digitando 6s steps(45) normal;
+    border-right: 2px solid white;
+    font-size: 2em;
+    margin: auto;
+    overflow: hidden;
+    padding: 5px;
+    white-space: nowrap;
+    width: 579px;
+}
+
+@keyframes piscacursor {
+    from {
+        border-right-color: white;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes digitando {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 579px;
+    }
+}
+
+.sobre #fotosobre {
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 2px black;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.conteudocursos,
+.conteudoprojetos,
+.conteudointeresses {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.conteudoprojetos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.conteudocursos>a>div,
+.conteudoprojetos>a>div,
+.conteudointeresses>a>div {
+    display: grid;
+    height: 200px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    width: 370px;
+}
+
+.conteudocursos a,
+.conteudoprojetos a,
+.conteudointeresses a {
+
+    color: white;
+}
+
+.divimg {
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px black;
+    height: 200px;
+    width: 370px;
+}
+
+/*     FOOTER     */
+.footercontainer {
+    background-color: white;
+    display: grid;
+    grid-template-rows: [contatos] 2fr [dadosinternos] 1fr;
+}
+
+.contatos {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    color: #009EE0;
+    border-top: 2px solid black;
+}
+
+.contactfont {
+    font-size: 1.5em;
+}
+
+.contatos a {
+    color: #009EE0;
+    font-size: 2.5em;
+    transition: text-shadow 0.3s;
+}
+
+.contatos a:hover {
+    color: red;
+    text-decoration: none;
+
+}
+
+.bottomfooter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
