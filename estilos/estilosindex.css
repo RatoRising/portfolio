@@ -209,7 +209,6 @@ nav a:hover {
 .contatos {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    justify-items: center;
     align-items: center;
     color: #009EE0;
     border-top: 2px solid black;
@@ -226,9 +225,8 @@ nav a:hover {
 }
 
 .contatos a:hover {
-    color: rgb(27, 144, 240);
+    color: goldenrod;
     text-decoration: none;
-
 }
 
 .bottomfooter {
