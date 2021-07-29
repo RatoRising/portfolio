@@ -14,9 +14,11 @@
 <body>
     <!-- CABEÇALHO -->
     <header>
-        <div class="containerheader">
-            <div class="logo"><a href="index.html" target="_self" rel="previous"><img src="imagens/rdev logop.png"
-                        alt="rdev logo"></a></div>
+        <div class="containerHeader">
+            <div class="logo">
+                <a href="index.html" target="_self" rel="previous"><img src="imagens/rdev logop.png"
+                        alt="rdev logo"></a>
+            </div>
             <div class="menu">
                 <nav>
                     <ul>
@@ -31,6 +33,14 @@
         </div>
     </header>
 
+    <div class="vaiMenu">
+        <input type="checkbox" id="checkboxMenu">
+        <label for="checkboxMenu"></label>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <!-- CONTEÚDO -->
     <article class="apresentacao" id="apresentacao">
         <div class="container">
@@ -39,12 +49,15 @@
             </div>
         </div>
     </article>
+
     <article class="sobre" id="sobre">
         <div class="container">
             <div>
-                <h1>Sobre mim</h1>
+                <h2>Sobre mim</h2>
             </div>
-            <img id="fotosobre" src="imagens/fotosobre.jpg" alt="Foto Rato">
+            <div id="fotoSobreDiv">
+                <img id="fotoSobre" src="imagens/fotosobre.jpg" alt="Foto Rato">
+            </div>
             <p>Meu nome é Reinaldo, tenho 39 anos e estou atualmente num processo de transição de carreira.</p>
             <p>Ao longo da minha história profissional já estive em muitos lugares, trabalhei em supermercado como
                 pacoteiro e repositor, fui ajudante geral e torneiro mecânico em uma metalúrgica, já fui vendedor de
@@ -82,10 +95,11 @@
                 e objetivo.</p>
         </div>
     </article>
+
     <article class="cursos" id="cursos">
         <div class="container">
             <div>
-                <h1>Cursos</h1>
+                <h2>Cursos</h2>
             </div>
             <p>Como iniciante que sou, estou fazendo várias coisas ao mesmo tempo, enquanto estudo JavaScript vou
                 reforçando meus conhecimentos em HTML e CSS que também estão em constante estágio de evolução, mas não
@@ -112,8 +126,13 @@
 
             <P>&#10022 Curso de JavaScript do <a href="https://www.cursoemvideo.com/cursos/" target="_blank"
                     rel="follow">Curso em Video</a></P>
-            <P>&#10022 Bootcamp <a href="https://abrasuaconta.santander.com.br/landing/" target="_blank" rel="follow">Santander</a> - Fullstack Developer pela <a href="https://digitalinnovation.one/sign-in?redirect=%2Fhome" target="_blank" rel="follow">DIO</a></P>
-            <P>&#10022 Bootcamp <a href="https://vtex.com/br-pt/" target="_blank" rel="follow">VTEX</a> - Hiring Coders pela <a href="https://www.gama.academy/gama-experience/desenvolvimento-full-stack" target="_blank" rel="follow">Gama Academy</a></P>
+            <P>&#10022 Bootcamp <a href="https://abrasuaconta.santander.com.br/landing/" target="_blank"
+                    rel="follow">Santander</a> - Fullstack Developer pela <a
+                    href="https://digitalinnovation.one/sign-in?redirect=%2Fhome" target="_blank" rel="follow">DIO</a>
+            </P>
+            <P>&#10022 Bootcamp <a href="https://vtex.com/br-pt/" target="_blank" rel="follow">VTEX</a> - Hiring Coders
+                pela <a href="https://www.gama.academy/gama-experience/desenvolvimento-full-stack" target="_blank"
+                    rel="follow">Gama Academy</a></P>
 
             <div class="conteudocursos">
                 <a href="">
@@ -143,10 +162,11 @@
             </div>
         </div>
     </article>
+
     <article class="projetos" id="projetos">
         <div class="container">
             <div>
-                <h1>Projetos que desenvolvi e/ou participei.</h1>
+                <h2>Projetos que desenvolvi e/ou participei.</h2>
             </div>
             <p>Bom... ainda não tenho muito conteúdo para esta campo, no entanto, parte do meu conhecimento já foi
                 aplicado no desenvolvimento deste site. Nele eu usei os recursos de HTML e CSS3 e ainda vou atualizando
@@ -169,7 +189,7 @@
     <article class="interesses" id="interesses">
         <div class="container">
             <div>
-                <h1>Interesses pessoais</h1>
+                <h2>Interesses pessoais</h2>
             </div>
             <p>Meus interesses são bastante variados, gosto de filmes, séries, notícias gerais, jogos, esportes, apesar
                 de no momento não ter me dedicado tanto a eles e vou encaixando quando possível nos "tempo livre". O meu
@@ -199,6 +219,7 @@
                 </a>
             </div>
         </div>
+
         <div class="voltar">
             <div>
                 <a href="index.html" target="_self" rel="previous"><img src="imagens/voltar.png" alt="voltar"></a>
@@ -222,7 +243,9 @@
                 <a target="_blank" href="https://www.facebook.com/ratorising"><i class="fab fa-facebook-square"></i></a>
                 <a target="_blank" href="https://n1personalizados.com.br"><i class="fas fa-store"></i></a>
             </div>
-            <div class="bottomfooter">Desenvolvido por Rdev - 2021.</div>
+            <div class="bottomfooter">
+                Desenvolvido por Rdev - 2021.
+            </div>
         </div>
     </footer>
 

@@ -5,27 +5,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #009EE0;
     text-align: justify;
-    text-indent: 50px;
+    line-height: 1.5em;
 }
 
-.sobre {
-    background-image: url(../imagens/imagebg2.jpg);
-    background-position: center-top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-}
-
-p {
-    font-size: 18px;
-    line-height: 25px;
-}
-
-h1 {
+h2 {
     font-size: 2em;
     line-height: 2em;
     text-shadow: 2px 2px 2px black;
@@ -36,29 +26,25 @@ a {
     text-decoration: none;
 }
 
-li {
-
-    list-style: none; 
-}
-
 /*     CABEÇALHO     */
 header {
     background-color: black;
     color: white;
-    font-size: 16px;
-    height: 100px;
     position: fixed;
     width: 100vw;
+    display: flex;
 }
 
-.containerheader {
-    align-items: center;
+.containerHeader {
+    color: black;
     display: flex;
     flex-wrap: wrap;
-    height: 100px;
+    align-items: center;
     justify-content: space-between;
+    min-height: 100px;
+    padding: 20px 40px;
+    width: 1200px;
     margin: auto;
-    width: 85vw;
 }
 
 nav li {
@@ -100,13 +86,13 @@ nav a:hover {
     text-decoration: none;
 }
 
-
 /*     ARTICLES     */
 .container {
     color: white;
     margin: auto;
     padding-top: 100px;
     max-width: 1200px;
+    padding: 20px;
 }
 
 /* PARALLAX */
@@ -153,7 +139,7 @@ nav a:hover {
     }
 }
 
-.sobre #fotosobre {
+.sobre #fotoSobre {
     border-radius: 20px;
     border: 2px solid white;
     box-shadow: 2px 2px 2px black;
@@ -175,24 +161,19 @@ nav a:hover {
     max-width: 1200px;
 }
 
-.conteudoprojetos {
-    grid-template-columns: repeat(2, 1fr);
-}
-
 .conteudocursos>a>div,
 .conteudoprojetos>a>div,
 .conteudointeresses>a>div {
     display: grid;
-    height: 200px;
     margin-bottom: 5px;
     margin-top: 20px;
-    width: 370px;
+    height: 200px;
+    width: 350px;
 }
 
 .conteudocursos a,
 .conteudoprojetos a,
 .conteudointeresses a {
-
     color: white;
 }
 
@@ -201,10 +182,11 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 2px 2px 1px black;
     height: 200px;
-    width: 370px;
+    width: 350px;
 }
 
 /*     FOOTER     */
+
 .footercontainer {
     background-color: white;
     display: grid;
@@ -212,11 +194,12 @@ nav a:hover {
 }
 
 .contatos {
+    border-top: 2px solid black;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     align-items: center;
+    justify-items: center;
     color: #009EE0;
-    border-top: 2px solid black;
 }
 
 .contactfont {
@@ -239,4 +222,195 @@ nav a:hover {
     color: white;
     text-align: center;
     padding: 10px;
+    max-width: 100vw;
+}
+
+@media (max-width: 1200px) {
+
+    .conteudocursos,
+    .conteudoprojetos,
+    .conteudointeresses {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        text-align: center;
+        max-width: 1200px;
+        grid-auto-flow: row-dense;
+    }
+
+    .digitador {
+        font-size: 1.5em;
+        width: 450px;
+    }
+
+    @keyframes digitando {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .digitador {
+        font-size: 1.5em;
+        width: 450px;
+    }
+
+    @keyframes digitando {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 450px;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 2em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .conteudocursos,
+    .conteudoprojetos,
+    .conteudointeresses {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .conteudocursos>a>div,
+    .conteudoprojetos>a>div,
+    .conteudointeresses>a>div {
+        display: grid;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        max-width: 350px;
+    }
+
+    .conteudocursos a,
+    .conteudoprojetos a,
+    .conteudointeresses a {
+        color: white;
+    }
+
+    .divimg {
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 1px black;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 710px) {
+    .containerHeader {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerHeader {
+        font-size: 13px;
+    }
+
+    .logo {
+        padding-bottom: 10px;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 10px;
+
+    }
+
+
+    h2 {
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .digitador {
+        font-size: .9em;
+        width: 270px;
+    }
+
+    @keyframes digitando {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 270px;
+        }
+    }
+
+    #fotoSobreDiv #fotoSobre {
+        border-radius: 10px;
+        width: 250px;
+    }
+
+    #fotoSobreDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudocursos,
+    .conteudoprojetos,
+    .conteudointeresses {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .conteudocursos>a>div,
+    .conteudoprojetos>a>div,
+    .conteudointeresses>a>div {
+        display: grid;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        height: 150px;
+        width: 280px;
+    }
+
+    .conteudocursos a,
+    .conteudoprojetos a,
+    .conteudointeresses a {
+        color: white;
+    }
+
+    .divimg {
+        border: 2px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 1px black;
+        height: 150px;
+        width: 280px;
+    }
+
+    .contatos {
+        border-top: 2px solid black;
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+        color: #009EE0;
+    }
 }
