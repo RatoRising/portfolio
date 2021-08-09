@@ -33,7 +33,6 @@ header {
     position: fixed;
     width: 100%;
     display: flex;
-
 }
 
 .containerHeader {
@@ -41,10 +40,14 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    min-height: 100px;
-    padding: 20px 40px;
+    padding: 10px 20px;
     width: 1200px;
     margin: auto;
+}
+
+#logoimg {
+    padding: 5px;
+    max-height: 60px;
 }
 
 .menuMobile {
@@ -67,7 +70,6 @@ nav li {
 }
 
 nav a {
-    display: inline;
     background-color: white;
     border-radius: 5px;
     color: black;
@@ -78,28 +80,10 @@ nav a {
 nav a:hover {
     background-color: #009EE0;
     color: white;
-    transition: .5s;
+    transition: .3s;
 }
 
-/*     LINK RETORNO INÍCIO      */
-.voltar {
-    display: flex;
-    margin: 30px;
-    justify-content: flex-end;
-}
-
-.voltar div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.voltar a {
-    color: white;
-    text-decoration: none;
-}
-
-/*     ARTICLES     */
+/*     SECTIONS     */
 .container {
     color: white;
     margin: auto;
@@ -116,8 +100,9 @@ nav a:hover {
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    display: flex;
+    display: grid;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -163,37 +148,20 @@ nav a:hover {
     width: 300px;
 }
 
-.conteudocursos,
-.conteudoprojetos,
-.conteudointeresses {
+.gridsection {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
     text-align: center;
     max-width: 1200px;
-}
-
-.conteudocursos>a>div,
-.conteudoprojetos>a>div,
-.conteudointeresses>a>div {
-    display: grid;
-    margin-bottom: 5px;
     margin-top: 20px;
-    height: 200px;
-    width: 350px;
+    padding: 10px;
 }
 
-.conteudocursos a,
-.conteudoprojetos a,
-.conteudointeresses a {
-    color: white;
-}
-
-.divimg {
+.gridsection img {
     border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 2px 2px 1px black;
+    box-shadow: 2px 2px 10px black;
     height: 200px;
     width: 350px;
 }
@@ -202,7 +170,8 @@ nav a:hover {
 .footercontainer {
     background-color: white;
     display: grid;
-    grid-template-rows: [contatos] 2fr [dadosinternos] 1fr;
+    grid-template-rows: [contatos] 1.5fr [dadosinternos] .5fr;
+    margin-top: 40px;
 }
 
 .contatos {
@@ -214,13 +183,9 @@ nav a:hover {
     color: #009EE0;
 }
 
-.contactfont {
-    font-size: 1.5em;
-}
-
 .contatos a {
     color: #009EE0;
-    font-size: 2.5em;
+    font-size: 2em;
     transition: text-shadow 0.3s;
 }
 
@@ -242,17 +207,6 @@ nav a:hover {
 
 
 @media (max-width: 1200px) {
-    .conteudocursos,
-    .conteudoprojetos,
-    .conteudointeresses {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        text-align: center;
-        max-width: 1200px;
-    }
-
     .digitador {
         font-size: 1.5em;
         width: 450px;
@@ -267,50 +221,44 @@ nav a:hover {
             width: 450px;
         }
     }
+
+    .gridsection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridsection img {
+        height: 220px;
+        width: 380px;
+    }
 }
 
 @media (max-width: 800px) {
-    .conteudocursos,
-    .conteudoprojetos,
-    .conteudointeresses {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-    }
-
-    .conteudocursos>a>div,
-    .conteudoprojetos>a>div,
-    .conteudointeresses>a>div {
-        display: grid;
-        margin-bottom: 5px;
-        margin-top: 20px;
-        max-width: 350px;
-    }
-
-    .conteudocursos a,
-    .conteudoprojetos a,
-    .conteudointeresses a {
+    header {
+        background-color: black;
         color: white;
+        position: fixed;
+        width: 100%;
+        display: flex;
     }
 
-    .divimg {
-        border: 2px solid white;
-        border-radius: 10px;
-        box-shadow: 2px 2px 1px black;
-        max-width: 350px;
+    .containerHeader {
+        padding: 15px 20px;
     }
-}
 
-@media (max-width: 710px) {
+    #logoimg {
+        max-height: 60px;
+    }
+
     .container {
-        padding-top: 130px;
+        padding-top: 100px;
     }
 
     .menuMobile {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 30px;
+        height: 30px;
     }
 
     nav ul {
@@ -319,37 +267,64 @@ nav a:hover {
         position: absolute;
         left: 0;
         width: 100%;
-        background-color: white;
+        background-color: black;
+        margin-top: 20px;
     }
 
-    nav li {
+    nav a {
         display: inline-block;
         padding: 10px;
+        width: 100%;
+    }
+
+    .gridsection {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .gridsection img {
+        height: 220px;
+        width: 380px;
     }
 }
 
 @media (max-width: 600px) {
+    .containerHeader {
+        padding: 5px 20px;
+    }
+
+    #logoimg {
+        max-height: 40px;
+    }
+
     .container {
-        padding-top: 130px;
+        padding-top: 70px;
     }
 
     .menuMobile {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 20px;
+        height: 20px;
     }
 
     nav ul {
         flex-direction: column;
+        display: none;
         position: absolute;
         left: 0;
         width: 100%;
-        background-color: white;
+        background-color: black;
+        margin-top: 10px;
     }
 
-    nav li {
+    nav a {
         display: inline-block;
         padding: 10px;
+        width: 100%;
     }
 
     h2 {
@@ -385,47 +360,25 @@ nav a:hover {
         justify-content: center;
     }
 
-    .conteudocursos,
-    .conteudoprojetos,
-    .conteudointeresses {
+    .gridsection {
         display: grid;
         gap: 10px;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
     }
 
-    .conteudocursos>a>div,
-    .conteudoprojetos>a>div,
-    .conteudointeresses>a>div {
-        display: grid;
-        margin-bottom: 5px;
-        margin-top: 20px;
-        height: 150px;
-        width: 280px;
-    }
-
-    .conteudocursos a,
-    .conteudoprojetos a,
-    .conteudointeresses a {
-        color: white;
-    }
-
-    .divimg {
-        border: 2px solid white;
-        border-radius: 10px;
-        box-shadow: 2px 2px 1px black;
-        height: 150px;
-        width: 280px;
+    .gridsection img {
+        height: 170px;
+        max-width: 280px;
+        justify-self: center;
     }
 
     .contatos {
-        border-top: 2px solid black;
-        display: grid;
-        gap: 20px;
-        padding: 20px;
+        gap: 10px;
+        padding: 10px;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        justify-items: center;
+        justify-content: space-around;
         color: #009EE0;
     }
 }
