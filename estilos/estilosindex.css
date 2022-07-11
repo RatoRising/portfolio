@@ -15,11 +15,9 @@ body {
     line-height: 1.5em;
 }
 
-
 p {
     text-indent: 3rem;
 }
-
 
 h2 {
     font-size: 2em;
@@ -189,7 +187,8 @@ nav a:hover {
     margin-top: 10px;
 }
 
-.estudos ul li {
+.estudos li {
+    list-style: none;
     margin-left: 20px;
 }
 
