@@ -1,6 +1,6 @@
-document.querySelector(".menuMobile").addEventListener("click", carregarMenu)
+document.querySelector(".menuMobile").addEventListener("click", mostrarMenu)
 
-function carregarMenu() {
+function mostrarMenu() {
     if (document.querySelector(".menu nav ul").style.display == 'flex') {
         document.querySelector(".menu nav ul").style.display = '';
     } else {

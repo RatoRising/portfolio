@@ -15,6 +15,12 @@ body {
     line-height: 1.5em;
 }
 
+
+p {
+    text-indent: 3rem;
+}
+
+
 h2 {
     font-size: 2em;
     line-height: 2em;
@@ -106,15 +112,19 @@ nav a:hover {
     height: 100vh;
 }
 
+.apresentacao p {
+    text-indent: 0;
+}
+
 .digitador {
-    animation: piscacursor .5s infinite normal, digitando 6s steps(45) normal;
+    animation: piscacursor .5s infinite normal, digitando 5s steps(40) normal;
     border-right: 2px solid white;
     font-size: 2em;
     margin: auto;
     overflow: hidden;
     padding: 5px;
     white-space: nowrap;
-    width: 579px;
+    width: 580px;
 }
 
 @keyframes piscacursor {
@@ -133,7 +143,7 @@ nav a:hover {
     }
 
     to {
-        width: 579px;
+        width: 580px;
     }
 }
 
@@ -158,12 +168,62 @@ nav a:hover {
     padding: 10px;
 }
 
+.gridsection p {
+    text-indent: 0;
+}
+
 .gridsection img {
-    border: 2px solid white;
+    border: 2px solid transparent;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
     height: 200px;
     width: 350px;
+}
+
+.gridsection img:hover{
+    border: 1px solid white;
+    box-shadow: 0px 0px 20px white;
+}
+
+.estudos ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.estudos ul li {
+    margin-left: 20px;
+}
+
+.gridsection .estudo:hover {
+    animation: anima-box-estudo;
+    animation-duration: 0.5s;
+}
+
+@keyframes anima-box-estudo {
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+.gridsection .projeto:hover {
+    animation: anima-box-projeto;
+    animation-duration: 0.5s;
+}
+
+@keyframes anima-box-projeto {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.gridsection .interesse:hover {
+    animation: anima-box-interesse;
+    animation-duration: 0.5s;
+}
+
+@keyframes anima-box-interesse {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*     FOOTER     */
@@ -186,12 +246,12 @@ nav a:hover {
 .contatos a {
     color: #009EE0;
     font-size: 2em;
-    transition: text-shadow 0.3s;
 }
 
 .contatos a:hover {
-    color: goldenrod;
+    color: black;
     text-decoration: none;
+    transition: .5s;
 }
 
 .bottomfooter {
