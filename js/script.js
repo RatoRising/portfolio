@@ -1,6 +1,7 @@
 const menuNavUl = document.querySelector('ul');
+const menuMobile = document.querySelector('.menu_mobile')
 
-document.querySelector('.menuMobile').addEventListener('click', () => {
+document.querySelector('.menu_mobile').addEventListener('click', () => {
 	menuNavUl.style.display === 'flex' ? (menuNavUl.style.display = '') : (menuNavUl.style.display = 'flex');
 });
 
