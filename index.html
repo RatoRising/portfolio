@@ -21,20 +21,21 @@
 
             <div class="menu">
                 <nav class="menu_navbar">
-                    <ul>
+                    <ul class="menu_navbar__ul">
                         <li><a class="menu-items" href="#about" target="_self" rel="next">Sobre</a></li>
-                        <li><a class="menu-items" href="#qualifications" target="_self" rel="next">Estudos</a></li>
+                        <li><a class="menu-items" href="#qualifications" target="_self" rel="next">Qualificações</a>
+                        </li>
                         <li><a class="menu-items" href="#projects" target="_self" rel="next">Projetos</a></li>
                         <li><a class="menu-items" href="#interests" target="_self" rel="next">Interesses</a></li>
                         <li><a class="menu-items" href="#contact" target="_self" rel="next">Contatos</a></li>
                     </ul>
                 </nav>
+            </div>
 
-                <div class="menu_mobile">
-                    <div class="mm_line"></div>
-                    <div class="mm_line"></div>
-                    <div class="mm_line"></div>
-                </div>
+            <div class="menu_mobile" onclick="transform_menu_icon(this)">
+                <div class="mm_line"></div>
+                <div class="mm_line"></div>
+                <div class="mm_line"></div>
             </div>
         </div>
     </header>
@@ -92,7 +93,7 @@
     </section>
 
     <section class="qualifications container" id="qualifications">
-        <h2>Estudos</h2>
+        <h2>Qualificações</h2>
 
         <div class="qualifications_text">
             <p>Como iniciante que sou, tenho estudado várias coisas ao mesmo tempo, enquanto desvendo os mistérios
@@ -147,7 +148,7 @@
             </ul>
         </div>
 
-        <div class="gridsection">
+        <div class="grid-section">
             <div class="qualification_grid_item">
                 <div><img class="divimg" src="images/htmlimagem.png" alt="html logo"></div>
                 <p>HTML5</p>
@@ -197,7 +198,7 @@
             </p>
         </div>
 
-        <div class="gridsection">
+        <div class="grid-section">
             <div class="project_grid_item">
                 <a href="https://ratorising.github.io/curso_javascript_CEV/" target="_blank" rel="follow">
                     <div><img class="divimg" src="images/projeto_jscurso.PNG" alt="curso js"></div>
@@ -252,7 +253,7 @@
             </p>
         </div>
 
-        <div class="gridsection">
+        <div class="grid-section">
             <div class="interest_grid_item">
                 <div><img class="divimg" src="images/devstuff.png" alt="imagem devstuff"></div>
                 <p>Dev Stuff</p>
@@ -293,7 +294,7 @@
         </div>
 
         <div class="footer_bottom">
-            Desenvolvido por Rdev - Julho 2022
+            Desenvolvido por Rdev - <span id="footer_date"></span>
         </div>
     </footer>
 

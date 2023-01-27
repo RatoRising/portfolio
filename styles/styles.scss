@@ -11,6 +11,7 @@ body {
 	color: white;
 	line-height: 1.5em;
 	text-align: justify;
+	overflow-x: hidden;
 
 	h2 {
 		font-size: 2em;
@@ -84,7 +85,6 @@ body {
 		}
 
 		.menu_navbar {
-			ul,
 			li {
 				display: inline;
 				padding: 5px;
@@ -116,18 +116,19 @@ body {
 			}
 
 			.menu_navbar {
-				ul {
+				.menu_navbar__ul {
 					flex-direction: column;
-					display: none;
 					position: absolute;
-					left: 0;
 					width: 100%;
 					background-color: black;
-					margin-top: 55px;
+					top: 60px;
+					transition: .5s;
+					left: 100vw;
 
-               li {
-                  margin: 0;
-               }
+					li {
+						display: block;
+						margin: 0;
+					}
 				}
 
 				a {
@@ -144,10 +145,31 @@ body {
 				width: 30px;
 				height: 30px;
 
-            .mm_line {
-               height: 3px;
-               background-color: white;
-            }
+				.mm_line,
+				.mm_line,
+				.mm_line {
+					height: 3px;
+					background-color: white;
+					transition: .5s;
+				}
+			}
+
+			.add_class {
+				left: 0;
+			}
+
+			.transform_menu_icon {
+				.mm_line:nth-child(1) {
+					transform: translate(0, 10px) rotate(-45deg);
+				}
+
+				.mm_line:nth-child(2) {
+					opacity: 0;
+				}
+
+				.mm_line:nth-child(3) {
+					transform: translate(0, -10px) rotate(45deg);
+				}
 			}
 		}
 
@@ -158,13 +180,27 @@ body {
 
 			.menu_navbar {
 				ul {
-					margin-top: 40px;
+					margin-top: 0px;
 				}
 			}
 
 			.menu_mobile {
 				width: 20px;
 				height: 20px;
+			}
+
+			.transform_menu_icon {
+				.mm_line:nth-child(1) {
+					transform: translate(0, 7px) rotate(-45deg);
+				}
+
+				.mm_line:nth-child(2) {
+					opacity: 0;
+				}
+
+				.mm_line:nth-child(3) {
+					transform: translate(0, -7px) rotate(45deg);
+				}
 			}
 		}
 	}
@@ -275,7 +311,7 @@ body {
 	}
 }
 
-.gridsection {
+.grid-section {
 	display: grid;
 	gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
@@ -289,10 +325,11 @@ body {
 	}
 
 	img {
-		border: 2px solid transparent;
+		border: 1px solid transparent;
 		border-radius: 10px;
 		height: 200px;
 		width: 350px;
+		transition: .5s;
 
 		&:hover {
 			border: 1px solid white;
@@ -300,42 +337,113 @@ body {
 		}
 	}
 
-	.qualification_grid_item {
-		&:hover {
-			animation: anima-box-qualification;
+	.qualification_grid_item:nth-child(2) {
+		img:hover {
+			transform: scale(1.1);
+			transition: .5s;
+		}
+	}
+
+	.qualification_grid_item:nth-child(3) {
+		img:hover {
+			transform: rotate(360deg);
+			transition: .5s;
+		}
+	}
+
+	.qualification_grid_item:nth-child(4) {
+		img:hover {
+			animation: anima-box-mright;
 			animation-duration: 0.5s;
 		}
 
-		@keyframes anima-box-qualification {
+		@keyframes anima-box-mright {
+			50% {
+				margin-right: -50px;
+			}
+
 			100% {
-				transform: rotate(1080deg);
+				margin-right: 0px;
+			}
+		}
+	}
+
+	.qualification_grid_item:nth-child(5) {
+		img {
+			transition: 1s;
+
+			&:hover {
+				transform: rotatey(180deg);
+				transition: 1s;
+			}
+		}
+	}
+
+	.qualification_grid_item:nth-child(6) {
+		img:hover {
+			animation: anima-box-mleft;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes anima-box-mleft {
+			50% {
+				margin-left: -50px;
+			}
+
+			100% {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	.qualification_grid_item:nth-child(7) {
+		img {
+			transition: 1s;
+
+			&:hover {
+				transform: rotatex(180deg);
+				transition: 1s;
+			}
+		}
+	}
+
+	.qualification_grid_item:nth-child(8) {
+		img:hover {
+			animation: anima-box-skew-right;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes anima-box-skew-right {
+			50% {
+				transform: skew(-45deg) translate(50%);
+			}
+		}
+	}
+
+	.qualification_grid_item:nth-child(9) {
+		img:hover {
+			animation: anima-box-skew-left;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes anima-box-skew-left {
+			50% {
+				transform: skew(45deg) translate(-50%);
 			}
 		}
 	}
 
 	.project_grid_item {
-		&:hover {
-			animation: anima-box-project;
-			animation-duration: 0.5s;
-		}
-
-		@keyframes anima-box-project {
-			100% {
-				transform: rotate(720deg);
-			}
+		img:hover {
+			transform: scale(1.1);
+			transition: .5s;
 		}
 	}
 
 	.interest_grid_item {
-		&:hover {
-			animation: anima-box-interest;
-			animation-duration: 0.5s;
-		}
-
-		@keyframes anima-box-interest {
-			100% {
-				transform: rotate(360deg);
-			}
+		img:hover {
+			transform: scale(1.1);
+			transition: .5s;
 		}
 	}
 
@@ -391,6 +499,7 @@ body {
 			&:hover {
 				color: black;
 				text-decoration: none;
+				transform: scale(1.5);
 			}
 		}
 
