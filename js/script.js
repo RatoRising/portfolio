@@ -27,13 +27,15 @@ menuNavLi.forEach((btn) => {
 		delay: 400,
 		origin: 'left',
 		distance: '100px',
-		interval: 400
+		interval: 400,
+		reset: true
 	};
 	let slideUp = {
 		delay: 400,
 		origin: 'bottom',
 		distance: '200px',
-		interval: 400
+		interval: 400,
+		reset: true
 	};
 	ScrollReveal().reveal('.qualification_grid_item:nth-child(odd)', slideLeft);
 	ScrollReveal().reveal('.qualification_grid_item:nth-child(even)', slideUp);
