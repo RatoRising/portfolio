@@ -1,21 +1,32 @@
 const menuNavUl = document.querySelector('.menu_navbar__ul');
 const menuMobileIcon = document.querySelector('.menu_mobile');
 const menuNavLi = document.querySelectorAll('.menu-items');
-const techList = [ 'HTML', 'CSS', 'SASS', 'GitHub', 'BEMCSS', 'Javascript', 'ReactJS', 'NodeJS', 'Typescript', 'MySQL' ];
+const techList = [
+	'HTML',
+	'CSS',
+	'SASS',
+	'GitHub',
+	'BEMCSS',
+	'Javascript',
+	'ReactJS',
+	'NodeJS',
+	'Typescript',
+	'MySQL'
+];
 
-const randomText = () => {
+const mainRandomTextHandler = () => {
 	const randomElement = techList[Math.floor(Math.random() * techList.length)];
-	const randomText = document.querySelector('.random-text')
-	randomText.innerHTML = randomElement;
+	const mainRandomTextHandler = document.querySelector('.main-random-text');
+	mainRandomTextHandler.innerHTML = randomElement;
 };
-setInterval(randomText, 700);
+setInterval(mainRandomTextHandler, 700);
 
-menuMobileIcon.addEventListener('click', () => {
+const showMenuItems = menuMobileIcon.addEventListener('click', () => {
 	menuNavUl.classList.toggle('left0');
 	menuMobileIcon.classList.toggle('transform_menu_icon');
 });
 
-menuNavLi.forEach((btn) => {
+const handleMenuItems = menuNavLi.forEach((btn) => {
 	btn.addEventListener('click', () => {
 		menuNavUl.classList.toggle('left0');
 		menuMobileIcon.classList.toggle('transform_menu_icon');
