@@ -73,7 +73,8 @@ body {
 }
 
 .header {
-	background-color: #000000;
+	background: linear-gradient(to right, #091131, #0075b9);
+	opacity: .97;
 	color: #ffffff;
 	position: fixed;
 	width: 100%;
@@ -103,6 +104,7 @@ body {
 
 			a {
 				background-color: #ffffff;
+				color: white;
 				border-radius: 5px;
 				color: black;
 				padding: 10px;
@@ -126,10 +128,10 @@ body {
 			}
 
 			.menu_navbar__ul {
+				background: linear-gradient(to right, #091131, #0075b9);
 				flex-direction: column;
 				position: absolute;
 				width: 100%;
-				background-color: black;
 				padding: 10px;
 				top: 60px;
 				left: 100vw;
@@ -475,6 +477,7 @@ body {
 	background-color: white;
 	display: grid;
 	grid-template-rows: [contatos] 1.5fr [dadosinternos] .5fr;
+	bottom: 0;
 
 	.contact {
 		border-top: 2px solid black;

@@ -14,12 +14,14 @@ const techList = [
 	'MySQL'
 ];
 
+
 const mainRandomTextHandler = () => {
-	const randomElement = techList[Math.floor(Math.random() * techList.length)];
-	const mainRandomTextHandler = document.querySelector('.main-random-text');
-	mainRandomTextHandler.innerHTML = randomElement;
+	const randomTech = techList[Math.floor(Math.random() * techList.length)];
+	const mainRandomTextArea = document.querySelector('.main-random-text');
+	mainRandomTextArea.innerHTML = randomTech;
 };
-setInterval(mainRandomTextHandler, 700);
+
+setInterval(mainRandomTextHandler, 1200);
 
 const showMenuItems = menuMobileIcon.addEventListener('click', () => {
 	menuNavUl.classList.toggle('left0');
