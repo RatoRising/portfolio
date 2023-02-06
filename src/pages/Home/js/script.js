@@ -1,6 +1,6 @@
-const menuNavUl = document.querySelector('.menu_navbar__ul');
+const menuNavList = document.querySelector('.menu_nav__list');
 const menuMobileIcon = document.querySelector('.menu_mobile');
-const menuNavLi = document.querySelectorAll('.menu-items');
+const menuNavListItem = document.querySelectorAll('.menu_nav__list-item');
 const techList = [
 	'HTML',
 	'CSS',
@@ -24,13 +24,13 @@ const mainRandomTextHandler = () => {
 setInterval(mainRandomTextHandler, 1200);
 
 const showMenuItems = menuMobileIcon.addEventListener('click', () => {
-	menuNavUl.classList.toggle('left0');
+	menuNavList.classList.toggle('left0');
 	menuMobileIcon.classList.toggle('transform_menu_icon');
 });
 
-const handleMenuItems = menuNavLi.forEach((btn) => {
+const handleMenuItems = menuNavListItem.forEach((btn) => {
 	btn.addEventListener('click', () => {
-		menuNavUl.classList.toggle('left0');
+		menuNavList.classList.toggle('left0');
 		menuMobileIcon.classList.toggle('transform_menu_icon');
 	});
 });

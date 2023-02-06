@@ -21,15 +21,15 @@
             </div>
 
             <div class="menu">
-                <nav class="menu_navbar">
-                    <ul class="menu_navbar__ul">
-                        <li><a class="menu-items" href="#about" target="_self" rel="next">Sobre</a></li>
-                        <li><a class="menu-items" href="#qualifications" target="_self" rel="next">Qualificações</a>
-                        </li>
-                        <li><a class="menu-items" href="#projects" target="_self" rel="next">Projetos</a></li>
-                        <li><a class="menu-items" href="#interests" target="_self" rel="next">Interesses</a></li>
-                        <li><a class="menu-items" href="#contact" target="_self" rel="next">Contatos</a></li>
-                        <li><a class="menu-items" href="src/pages/Home/images/Reinaldo - 2023.pdf" target="_blank"
+                <nav class="menu_nav">
+                    <ul class="menu_nav__list">
+                        <li><a class="menu_nav__list-item" href="#about" target="_self" rel="next">Sobre</a></li>
+                        <li><a class="menu_nav__list-item" href="#qualifications" target="_self"
+                                rel="next">Qualificações</a></li>
+                        <li><a class="menu_nav__list-item" href="#projects" target="_self" rel="next">Projetos</a></li>
+                        <li><a class="menu_nav__list-item" href="#interests" target="_self" rel="next">Interesses</a></li>
+                        <li><a class="menu_nav__list-item" href="#contact" target="_self" rel="next">Contatos</a></li>
+                        <li><a class="menu_nav__list-item" href="src/pages/Home/images/Reinaldo - 2023.pdf" target="_blank"
                                 rel="follow">CV</a></li>
                     </ul>
                 </nav>
@@ -53,12 +53,13 @@
 
     </main>
 
-    <section class="about bg-gradient" id="about">
-        <div class="container">
+    <section class="about" id="about">
+        <div class="container-standard">
             <h2>Sobre</h2>
-            <div id="about_photo_div">
-                <img id="about_photo" src="src/pages/Home/images/fotosobre.jpg">
+            <div class="about_photo">
+                <img src="src/pages/Home/images/fotosobre.jpg">
             </div>
+
             <div class="about_text">
                 <p>Meu nome é Reinaldo, tenho 41 anos e estou atualmente num processo de transição de carreira.</p>
                 <p>Ao longo da minha história profissional já estive em muitos lugares, trabalhei em supermercado como
@@ -69,7 +70,7 @@
                     que me proporcionou grande aprendizado como gestor de equipes.</p>
                 <p>Depois disso trabalhei como analista de contratos executando uma rotina de prospecção de prestadores
                     de
-                    serviços e gerenciamento das demandas de inspeção que inclui revisão de relatórios, manutenção de
+                    serviços e gerenciamento das demandas de inspeção que incluía revisão de relatórios, manutenção de
                     rastreabilidade de materiais, contatos com prestadores, clientes internos e externos e faturamento
                     dos
                     contratos dentre outras atividades. Nesse período como analista aprendi muito a respeito de negócios
@@ -80,9 +81,9 @@
                     aprendizado foi exponencial.</p>
                 <p>Após sair desta empresa resolvi que era o momento de começar a empreender, estudei e abri uma pequena
                     loja de personalização de produtos e apesar de não ter mantido a loja física, ainda tenho um
-                    e-comerce
+                    e-commerce
                     que mantenho em movimento fornecendo serviços e produtos sublimados para o varejo e atacado.</p>
-                <p>Fiz ainda uma breve passagem pela empresa anterior, mas optei por continuar o meu negócio de produtos
+                <p>Fui convidadeo a retornar a empresa anterior, e após entender que já tinha cumprido meu propósito ali, optei por continuar o meu negócio de produtos
                     personalizados.</p>
                 <p>E por último, mas não menos importante, como mencionado acima, estou hoje num processo de transição e
                     busca de novos horizontes e encontrei no desenvolvimento e programação as ferramentas e o
@@ -90,23 +91,16 @@
                     para isso. De certo não é um caminho curto e nem fácil, mas o propósito e ter uma carreira sólida
                     nesta
                     área.</p>
-                <p>Este site através do qual me apresento a você é um fruto do meu aprendizado até então, ele será
-                    mantido
-                    atualizado e melhorado a medida que meus conhecimentos são desenvolvidos, mas o manterei sempre
-                    simples e objetivo.
-                </p>
             </div>
         </div>
     </section>
 
     <section class="qualifications parallax " id="qualifications">
-        <div class="container">
+        <div class="container-standard">
             <h2>Qualificações</h2>
 
             <div class="qualifications_text">
-                <p>Como iniciante que sou, tenho estudado várias coisas ao mesmo tempo, enquanto desvendo os mistérios
-                    do JavaScript vou reforçando meus conhecimentos em HTML e CSS, bem como outras disciplinas que
-                    envolvem o ambiente de desenvolvimento.
+                <p>Como iniciante que sou, tenho estudado várias coisas ao mesmo tempo, e sigo desbravando esse universo maluco e extremamente envolvente.
                 </p>
                 <p>Não tem sido uma tarefa fácil, no início, a quantidade de informações te faz querer desistir e até se
                     sentir incapaz, o que em alguns momentos me fez parar um pouco e refletir sobre a escolha e ficar
@@ -115,7 +109,7 @@
                     posicionado na área, pois a medida em que vai adentrando e formando uma base de conhecimento as
                     coisas vão ficando mais claras.
                 </p>
-                <p>Abaixo podem ser vistas algumas das coisas que já vi e fiz ao longo desse caminho:</p>
+                <p>Aqui vai uma listinha de algumas das coisas que já vi e fiz ao longo desse caminho:</p>
                 <ul class="ul_main">
                     <li>&#10022 Trilha Discover <a href="https://www.rocketseat.com.br/" target="_blank">Rocketseat</a>
                         - Trilha de base para desenvolvimento fullstack com fundamentos de React, NodeJs e SQL.</li>
@@ -154,7 +148,7 @@
                 </ul>
             </div>
 
-            <div class="grid-section">
+            <div class="container-grid-3cols">
                 <div class="qualification_grid_item">
                     <div><img class="divimg" src="src/pages/Home/images/htmlimg.png" alt="html logo"></div>
                     <label for="qualification_grid_item">HTML5</label>
@@ -196,15 +190,15 @@
         </div>
     </section>
 
-    <section class="projects bg-gradient" id="projects">
-        <div class="container">
+    <section class="projects" id="projects">
+        <div class="container-standard">
             <h2>Projetos</h2>
             <div class="projects_text">
                 <p>Esta é uma área que permanecerá em desenvolvimento enquanto estiver seguindo esse caminho, seja qual
                     for o horizonte.
                 </p>
             </div>
-            <div class="grid-section">
+            <div class="container-grid-3cols">
                 <div class="project_grid_item">
                     <a href="https://ratorising.github.io/curso_javascript_CEV/" target="_blank" rel="follow">
                         <div><img class="divimg" src="src/pages/Home/images/projeto_jscurso.PNG" alt="curso js"></div>
@@ -255,15 +249,10 @@
     </section>
 
     <section class="interests parallax" id="interests">
-        <div class="container">
+        <div class="container-standard">
             <h2>Interesses pessoais</h2>
 
-            <div class="interests_text">
-                <p>Uma singela amostra de alguns dos meus interesses.
-                </p>
-            </div>
-
-            <div class="grid-section">
+            <div class="container-grid-3cols">
                 <div class="interest_grid_item">
                     <div><img class="divimg" src="src/pages/Home/images/devstuff.png" alt="devstuff"></div>
                     <label for="interest_grid_item">Dev Stuff</label>
