@@ -390,6 +390,10 @@ body a:hover {
 .projects .project_grid_item label {
   cursor: pointer;
 }
+.projects:has(img:hover) img:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.8);
+}
 
 .interests .interest_grid_item:nth-child(1n) {
   margin-bottom: 15px;

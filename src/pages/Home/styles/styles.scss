@@ -480,6 +480,11 @@ body {
 			cursor: pointer;
 		}
 	}
+
+	&:has(img:hover) img:not(:hover) {
+		opacity: .5;
+		transform: scale(.8);
+	}
 }
 
 .interests {
