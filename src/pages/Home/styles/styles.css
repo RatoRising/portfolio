@@ -102,7 +102,7 @@ body li {
   list-style: none;
 }
 body a {
-  color: #dfd4d4;
+  color: #afa9a9;
   text-decoration: none;
 }
 body a:hover {
@@ -386,9 +386,6 @@ body a:hover {
 .projects .project_grid_item img:hover {
   transform: scale(1.1);
   transition: 0.5s;
-}
-.projects .project_grid_item label {
-  cursor: pointer;
 }
 .projects:has(img:hover) img:not(:hover) {
   opacity: 0.5;
