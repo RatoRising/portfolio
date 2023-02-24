@@ -15,11 +15,18 @@ const techList = [
 	"MySQL",
 ];
 
-const headerToggler = window.addEventListener("scroll", () => {
-	const header = document.querySelector(".header");
-	window.scrollY > 100 && screen.width >= 800 ?
-		header.classList.add("headerBg") :
-		header.classList.remove("headerBg");
+const bgHeaderToggler = window.addEventListener("scroll", () => {
+	const header = document.querySelector(".header-bg-in-effect");
+	const menuOpened = window.scrollY > 10 && screen.width >= 800;
+	if (menuOpened) {
+		header.classList.add("bg-header-in")
+		header.classList.remove("bg-header-out")
+	}
+
+	if (!menuOpened) {
+		header.classList.add("bg-header-out")
+		header.classList.remove("bg-header-in")
+	}
 });
 
 const menuItemsShow = menuMobileIcon.addEventListener("click", () => {
@@ -36,13 +43,16 @@ const menuItemsHandler = menuNavListItem.forEach((btn) => {
 
 const upButtonShow = window.addEventListener("scroll", () => {
 	window.scrollY > 100 ?
-	upButton.classList.add('up-button-show') :
-	upButton.classList.remove('up-button-show') ;
+		upButton.classList.add('up-button-show') :
+		upButton.classList.remove('up-button-show');
 });
 
 const goToPageTop = upButton.addEventListener('click', () => {
 	window.scrollY > 100 ?
-	window.scrollTo({top: 0, behavior: 'auto'}) : console.log("tricky")
+		window.scrollTo({
+			top: 0,
+			behavior: 'auto'
+		}) : console.log("tricky")
 })
 
 const mainRandomTextHandler = () => {
