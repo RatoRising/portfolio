@@ -1,6 +1,6 @@
 const menuNavList = document.querySelector(".menu_nav__list");
-const menuMobileIcon = document.querySelector(".menu_mobile");
 const menuNavListItem = document.querySelectorAll(".menu_nav__list-item");
+const menuMobileIcon = document.querySelector(".menu_mobile");
 const upButton = document.querySelector(".up-button");
 const techList = [
 	"HTML",
@@ -15,7 +15,7 @@ const techList = [
 	"MySQL",
 ];
 
-const bgHeaderToggler = window.addEventListener("scroll", () => {
+const headerBgToggler = window.addEventListener("scroll", () => {
 	const header = document.querySelector(".header-bg-in-effect");
 	const menuOpened = window.scrollY > 10 && screen.width >= 800;
 	if (menuOpened) {
@@ -47,7 +47,7 @@ const upButtonShow = window.addEventListener("scroll", () => {
 		upButton.classList.remove('up-button-show');
 });
 
-const goToPageTop = upButton.addEventListener('click', () => {
+const upButtonHandler = upButton.addEventListener('click', () => {
 	window.scrollY > 100 ?
 		window.scrollTo({
 			top: 0,
@@ -55,6 +55,7 @@ const goToPageTop = upButton.addEventListener('click', () => {
 		}) : console.log("tricky")
 })
 
+// refactor inside the setInterval
 const mainRandomTextHandler = () => {
 	const randomTech = techList[Math.floor(Math.random() * techList.length)];
 	const mainRandomTextArea = document.querySelector(".main-random-text");
