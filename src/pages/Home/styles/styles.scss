@@ -73,7 +73,7 @@ $gradient-horizontal: linear-gradient(to right, #091131, #0075b9);
 }
 
 .bg-parallax {
-	background-image: url(../images/bg-parallax_img.jpeg);
+	background-image: url('../images/bg-parallax_img.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -259,7 +259,7 @@ header {
 				position: absolute;
 				width: 100%;
 				padding: 10px;
-				top: 70px;
+				top: 80px;
 				left: 100vw;
 				transition: .5s;
 
@@ -315,7 +315,7 @@ header {
 			}
 
 			.menu_nav__list {
-				top: 60px;
+				top: 70px;
 
 				ul {
 					margin-top: 0px;
@@ -330,7 +330,7 @@ header {
 
 			.transform_menu_icon {
 				.mm_line1 {
-					transform: translate(0, 7px) rotate(-45deg);
+					transform: translate(0, 6px) rotate(-45deg);
 				}
 
 				.mm_line2 {
@@ -583,8 +583,8 @@ main {
 .up-button-show {
 	display: flex;
 	position: fixed;
-	top: 80vh;
-	right: 10vw;
+	top: 50vh;
+	right: 0;
 	background-color: white;
 	padding: 3px;
 	animation: up-button-animation;
@@ -592,7 +592,7 @@ main {
 	animation-timing-function: linear;
 	width: 50px;
 	height: 50px;
-	border-radius: 50%;
+	border-radius: 50% 0 0 50%;
 	z-index: 1;
 	cursor: pointer;
 
